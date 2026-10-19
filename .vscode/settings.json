@@ -1,0 +1,9 @@
+{
+  "cucumber.glue": [
+    "cypress/e2e/src/step_definitions/**/*.ts"
+  ],
+  "cucumberautocomplete.steps": [
+    "cypress/e2e/src/step_definitions/**/*.ts"
+  ],
+  "cucumberautocomplete.syncfeatures": "cypress/e2e/**/*.feature"
+}

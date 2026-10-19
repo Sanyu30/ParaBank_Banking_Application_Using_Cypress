@@ -1,0 +1,14 @@
+{
+  "account": [
+    {
+      "account": "55524",
+      "balance": "$415.50",
+      "availableAmount": "$415.50"
+    },
+    {
+      "account": "56856",
+      "balance": "$100.00",
+      "availableAmount": "$100.00"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "cy_ts_case_study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run",
+    "cy:all": "npx cypress run",
+    "cy:feature": "npx cypress run --spec \"cypress/e2e/src/us_01_login_valid.feature\"",
+    "cy:feature-tag": "npx cypress run --spec \"cypress/e2e/src/us_01_login_valid.feature\" --env tags='@'",
+    "cy:features": "npx cypress run --spec \"cypress/e2e/src/**/*.feature\"",
+    "cy:features-tag": "npx cypress run --spec \"cypress/e2e/src/**/*.feature\" --env tags=$npm_config_tag",
+    "cy:chrome": "npx cypress run --browser chrome",
+    "cy:chrome-login": "npx cypress run --browser chrome --spec \"cypress/e2e/src/us_01_login.cy.ts\"",
+    "cy:chrome-feature": "npx cypress run --browser chrome --spec \"cypress/e2e/src/us_01_login_valid.feature\"",
+    "cy:login": "npx cypress run --spec \"cypress/e2e/src/parabankSpec/us_01_login.cy.ts\"",
+  "cy:register": "npx cypress run --spec \"cypress/e2e/src/bdd/us_02_register.feature\"",
+  "cy:account-overview": "npx cypress run --spec \"cypress/e2e/src/us_03_account_overview.cy.ts\"",
+  "cy:open-account": "npx cypress run --spec \"cypress/e2e/src/us_04_open_account.cy.ts\"",
+  "cy:transfer-funds": "npx cypress run --spec \"cypress/e2e/src/us_05_transfer_funds.cy.ts\"",
+  "cy:bill-pay": "npx cypress run --spec \"cypress/e2e/src/us_06_bill_pay.cy.ts\"",
+  "cy:find-transactions": "npx cypress run --spec \"cypress/e2e/src/parabankSpec/us_07_find_transactions.cy.ts\"",
+  "cy:update-contact": "npx cypress run --spec \"cypress/e2e/src/us_08_update_contact_info.cy.ts\"",
+  "cy:request-loan": "npx cypress run --spec \"cypress/e2e/src/us_09_request_loan.cy.ts\"",
+  "cy:rest": "npx concurrently \"npm run cy:account-overview\" \"npm run cy:open-account\" \"npm run cy:transfer-funds\" \"npm run cy:bill-pay\" \"npm run cy:find-transactions\" \"npm run cy:update-contact\" \"npm run cy:request-loan\"",
+  "cy:ordered": "npm run cy:register && npm run cy:login && npm run cy:rest"
+
+  },
+  
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^28.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "@faker-js/faker": "^10.6.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.15.30",
+    "concurrently": "^10.0.6",
+    "cypress": "^16.1.1",
+    "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "cypress@16.1.1": true
+  },
+ "cypress-cucumber-preprocessor": {
+  "stepDefinitions": [
+    "cypress/e2e/src/step_definitions/**/*.ts"
+  ]
+}
+}

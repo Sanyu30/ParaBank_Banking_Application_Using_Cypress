@@ -1,0 +1,16 @@
+{
+  "firstName": "Sanyukta",
+  "lastName": "Bansode",
+  "address": "London street1234",
+  "city": "Reading",
+  "state": "London",
+  "zipCode": "12345",
+  "phoneNumber": "07123456789",
+  "ssn": "SSN1234",
+  "username": "testuser123",
+  "password": "test123",
+  "updatedAddress": "London street3095",
+  "updatedCity": "Read137",
+  "updatedPhone": "0778172598081",
+  "updatedFirstName": "Sanyukta Seema"
+}
